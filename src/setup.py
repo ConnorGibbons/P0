@@ -28,7 +28,7 @@ def tokenize(text,k):
         elif((token > max) and (token != "Too Short")):
             max = token
 
-    extractedTokens.append(f"{len(lines)} {min} {max}")
+    extractedTokens.append(f"{len(lines)} {min if min!="" else "null"} {max if max!="" else "null"}")
     return extractedTokens
     
 
