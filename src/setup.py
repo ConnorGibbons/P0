@@ -16,16 +16,16 @@ def tokenize(text,k):
 
     min = ""
     for token in extractedTokens:
-        if(min == ""):
+        if(min == "" and token != "Too Short"):
             min = token
-        elif((token < min) and (token != "Too Short")):
+        elif(token < min and token != "Too Short"):
             min = token
 
     max = ""
     for token in extractedTokens:
-        if(max == ""):
+        if(max == "" and token != "Too Short"):
             max = token
-        elif((token > max) and (token != "Too Short")):
+        elif(token > max and token != "Too Short"):
             max = token
     min = min if min != "" else "null"
     max = max if max != "" else "null"
